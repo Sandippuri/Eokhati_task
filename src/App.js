@@ -1,10 +1,9 @@
-import { Navigate, BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import {BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Signup from './Components/Signup';
 import SimpleNav from './Components/SimpleNav';
 import Login from './Components/Login';
 import Home from './Components/Home';
 import ProtectRoutes from './Components/ProtectRoutes';
-import { useSelector } from 'react-redux';
 
 
 function App() {
