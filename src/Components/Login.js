@@ -25,16 +25,24 @@ const Login = () => {
         e.preventDefault();
         // console.log(loginDetail);
         const users= localStorage.getItem("users");
-        const user = JSON.parse(users);
+        var user = JSON.parse(users);
+        // console.log(user);
+        // console.log(mainUser);
         if(user){
             const mainUser = user.find(user=>user.email===loginDetail.email);
-            if (loginDetail.email === mainUser.email && loginDetail.password === mainUser.password) {
+            if(!mainUser){
+                alert("user not registered");
+            }
+            else if(loginDetail.email === mainUser.email && loginDetail.password === mainUser.password) {
                 dispatch(authAction.login());
                 navigate('/',{replace:true})
             }
+            else{
+                alert("user not found");
+            }
         }
         else {
-            alert("user not registered");
+            alert("user not found");
         }
         setLoginDetail({email:"",password:""});
 
