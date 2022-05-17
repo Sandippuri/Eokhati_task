@@ -26,10 +26,8 @@ const Login = () => {
         // console.log(loginDetail);
         const users= localStorage.getItem("users");
         const user = JSON.parse(users);
-        // console.log(user);
-        const mainUser = user.find(user=>user.email===loginDetail.email);
-        console.log(mainUser)
-        if(mainUser){
+        if(user){
+            const mainUser = user.find(user=>user.email===loginDetail.email);
             if (loginDetail.email === mainUser.email && loginDetail.password === mainUser.password) {
                 dispatch(authAction.login());
                 navigate('/',{replace:true})

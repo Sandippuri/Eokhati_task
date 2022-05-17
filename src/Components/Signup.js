@@ -26,7 +26,7 @@ const Signup = () => {
    Users.push(signupDetail);
    setSignUpDetail({fName:"",lName:"",email:"",phone:"",password:""});
    localStorage.setItem("users",JSON.stringify(Users));
-  console.log(Users);
+  // console.log(Users);
   }
   return (
     <Box sx={{ height: "80vh" }}>
