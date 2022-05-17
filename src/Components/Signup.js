@@ -32,7 +32,7 @@ const Signup = () => {
     <Box sx={{ height: "80vh" }}>
       <Stack justifyContent="center" fullWidth alignItems="center">
 
-        <Card sx={{ width: 650, padding: 3, mt: 2 }}>
+        <Card sx={{ width: 600, padding: 3, mt: 2 }}>
         <CardContent >
           <form action="" onSubmit={handleSubmit}>
             <Grid container spacing={2}>

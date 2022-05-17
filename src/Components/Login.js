@@ -28,6 +28,7 @@ const Login = () => {
         const user = JSON.parse(users);
         // console.log(user);
         const mainUser = user.find(user=>user.email===loginDetail.email);
+        console.log(mainUser)
         if(mainUser){
             if (loginDetail.email === mainUser.email && loginDetail.password === mainUser.password) {
                 dispatch(authAction.login());
@@ -44,7 +45,7 @@ const Login = () => {
         <Box sx={{ height: "80vh" }}>
             <Stack justifyContent="center" fullWidth alignItems="center">
 
-                <Card sx={{ width: 650, padding: 3 }}>
+                <Card sx={{ width: 600, padding: 3 }}>
                     <CardContent>
                         <form action="" onSubmit={handleSubmit}>
                             <Grid container spacing={2}>
